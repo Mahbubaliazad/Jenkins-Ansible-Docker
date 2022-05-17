@@ -22,7 +22,7 @@ pipeline{
         
         stage('Docker Build'){
             steps{
-                sh "docker build . -t kammana/hariapp:${DOCKER_TAG} "
+                sh "docker build . -t kammana/azadapp:${DOCKER_TAG} "
             }
         }
         
@@ -32,7 +32,7 @@ pipeline{
                     sh "docker login -u kammana -p ${dockerHubPwd}"
                 }
                 
-                sh "docker push kammana/hariapp:${DOCKER_TAG} "
+                sh "docker push kammana/azadapp:${DOCKER_TAG} "
             }
         }
         
