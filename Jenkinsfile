@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('SCM'){
             steps{
-                git credentialsId: 'github', 
+                git branch: 'main', credentialsId: 'github', 
                 url: 'https://github.com/Mahbubaliazad/Jenkins-Ansible-Docker'
             }
         }
